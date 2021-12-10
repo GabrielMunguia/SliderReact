@@ -5,9 +5,10 @@ import './assets/css/slider.css'
 import { SliderImg } from "./components/SliderImg";
 export const Slider = () => {
 
+
 const [active, setactive] = useState(0)
 const [lengthData, setLengthData] = useState(0)
-
+console.log(active)
 const handleNext = useCallback(() => {
   if(active===lengthData-1){
     setactive(0);
@@ -60,16 +61,16 @@ setDirection("next")
 <div className="col-10">
 <div className="container-slider d-flex bg-dark p-0">
   <SliderImg direction={direction} active={active} setLengthData={setLengthData} />
-  <div className="d-flex justify-content-between align-items-center  p-0 h-100 position-absolute col-12">
-  <button  className="btn btn-primary m-2"  onClick={handleNext}>+1</button>
-  <button  className="btn btn-danger m-2"  onClick={handlePrev}>-1</button>
-
-  </div>
+  
   </div>  
 </div>
 </div>
 
+  <div className="d-flex justify-content-center">
+  <button  className="btn btn-primary m-2"  onClick={handleNext}>+1</button>
+  <button  className="btn btn-danger m-2"  onClick={handlePrev}>-1</button>
 
+  </div>
   
   </div>);
 };
