@@ -1,0 +1,12 @@
+.container-slider{
+    width: 100%;
+    height: 22em;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.img-slider{
+    width: 100% !important;
+    height: 100% !important;
+}
